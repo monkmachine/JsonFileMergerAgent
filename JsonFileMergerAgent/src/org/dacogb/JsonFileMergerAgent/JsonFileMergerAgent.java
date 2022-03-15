@@ -3,6 +3,8 @@ package org.dacogb.JsonFileMergerAgent;
 import java.io.IOException;
 import java.util.HashMap;
 
+import org.dacogb.jsonFileMerger.JsonFileMerger;
+
 import com.ibi.config.ExitInfo;
 import com.ibi.config.PropertyGroup;
 import com.ibi.config.PropertyType;
@@ -13,8 +15,6 @@ import com.ibi.edaqm.XDErrorDocument;
 import com.ibi.edaqm.XDException;
 import com.ibi.edaqm.XDUtil;
 import com.ibi.edaqm.XDVDesc;
-
-import jsonFileMerger.JsonFileMerger;
 
 /**
  * This class is a custom agent for iWay Service Manager.
