@@ -222,6 +222,7 @@ public final class JsonFileMergerAgent extends XDAgent
 			}
 			catch (Exception e)
 			{
+				logger.error("Error " + e.getMessage());
 				XDErrorDocument edoc = new XDErrorDocument(worker, docIn, XDErrorDocument.PIPE_AGENT, getNodeName(), tMap, e);
 				edoc.moveTo(docOut);
 				return EX_FAIL_PARSE;
@@ -239,11 +240,9 @@ public final class JsonFileMergerAgent extends XDAgent
 		try {
 			jsonFileMerger.execute();
 		} catch (IllegalArgumentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error("Error " + e.getMessage());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error("Error " + e.getMessage());
 		}
 		// sample for copy process only; remove this and insert your code here
 		docIn.moveTo(docOut);
